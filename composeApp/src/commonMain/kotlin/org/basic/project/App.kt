@@ -34,6 +34,7 @@ import androidx.compose.foundation.layout.Arrangement
 
 import kmpbasico.composeapp.generated.resources.Res
 import kmpbasico.composeapp.generated.resources.compose_multiplatform
+import org.basic.project.bottomBar.BottomBarScreen
 
 @Composable
 fun App() {
@@ -89,6 +90,7 @@ class MainScreen: Screen {
                 )
             }
 
+
             Spacer(modifier = Modifier.height(30.dp))
 
             Button(
@@ -98,6 +100,22 @@ class MainScreen: Screen {
             ) {
                 Text(
                     text = "Navegar a la 3ra pantalla"
+                )
+            }
+
+            Spacer(
+                modifier = Modifier.height(30.dp)
+            )
+
+            Button(
+                onClick = {
+                    navigator.push(
+                        item = BottomBarScreen()
+                    )
+                }
+            ){
+                Text(
+                    text = "Bottombar"
                 )
             }
         }
